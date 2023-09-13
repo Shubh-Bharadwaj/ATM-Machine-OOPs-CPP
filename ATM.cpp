@@ -164,7 +164,7 @@ int main()
                 default:
                     cout << "Enter Valid Data";
                 }
-            } while (1); // Menu condition is always True loop will run infinte times
+            } while (1); // Menu condition is always True, loop will run infinte times
         }
         else{
             cout<<endl<<"User Details are Invalid";
