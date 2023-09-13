@@ -170,6 +170,6 @@ int main()
             cout<<endl<<"User Details are Invalid";
             _getch();
         }
-    } while (1); // Login condition is always True loop will run infinte times
+    } while (1); // Login condition is always True, loop will run infinte times
     return 0;
 }
