@@ -9,16 +9,16 @@ class Atm {
         string name;
         int pin;
         double balance;
-        string mobile_no; // decreses complexity
+        string Phone_no; // decreses complexity
     public:
-    void setdata(long int account_no_a, string name_a, int pin_a, double balance_a, string mobile_no_a)
+    void setdata(long int account_no_a, string name_a, int pin_a, double balance_a, string Phone_no_a)
     {
         //setting value of member variables
         account_no = account_no_a;
         name = name_a;
         pin =  pin_a;
         balance = balance_a;
-        mobile_no = mobile_no_a;
+        Phone_no = Phone_no_a;
     }
     long int getaccount_no()
     {
@@ -36,22 +36,22 @@ class Atm {
     {
         return balance;
     }
-    string getmobile_no()
+    string getPhone_no()
     {
-        return mobile_no;
+        return Phone_no;
     }
-    // Updating mobile number
-    void setmobile(string mobold, string mobnew)
+    // Updating Phone number
+    void setPhone(string mobold, string mobnew)
     {
-        if (mobold == mobile_no)
+        if (mobold == Phone_no)
         {
-            mobile_no= mobnew;
+            Phone_no= mobnew;
             cout<<endl<<"Sucessfully Updated";
             _getch();
         }
         else
         {
-            cout<<endl<<"Incorrect Mobile Number";
+            cout<<endl<<"Incorrect Phone Number";
             _getch();
         }
     }
@@ -117,14 +117,14 @@ int main()
             do
             {
                 int amount=0;
-                string oldmobileno, newmobileno;
+                string oldPhoneno, newPhoneno;
                 system("cls");
                 cout<<endl<<"******Welcome to ATM******"<<endl;
                 cout<<endl<<"Select Options";
                 cout<<endl<<"1. Check Balance";
                 cout<<endl<<"2. Cash Withdraw";
                 cout<<endl<<"3. Show User details";
-                cout<<endl<<"4. Update Mobile Number";
+                cout<<endl<<"4. Update Phone Number";
                 cout<<endl<<"5. Deposit Cash";
                 cout<<endl<<"6. Exit"<<endl;
                 cin>>choice;
@@ -144,15 +144,15 @@ int main()
                     cout<<"-> Account Number: "<<user1.getaccount_no();
                     cout<<"-> Account Name: "<<user1.getname();
                     cout<<"-> Balance: "<<user1.getbalance();
-                    cout<<"-> Mobile Number: "<<user1.getmobile_no();
+                    cout<<"-> Phone Number: "<<user1.getPhone_no();
                     _getch();
                     break;
                 case 4:
-                cout<<endl<<"Enter Old Mobile Number: ";
-                cin>> oldmobileno;
-                cout<<endl<<"Enter New Mobile Number: ";
-                cin>> newmobileno;
-                user1.setmobile(oldmobileno,newmobileno);
+                cout<<endl<<"Enter Old Phone Number: ";
+                cin>> oldPhoneno;
+                cout<<endl<<"Enter New Phone Number: ";
+                cin>> newPhoneno;
+                user1.setPhone(oldPhoneno,newPhoneno);
                 break;
                 case 5:
                 cout<<endl<<"Enter Amount: ";
